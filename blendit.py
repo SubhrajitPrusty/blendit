@@ -26,3 +26,13 @@ else:
 
 	new_im = Image.new('RGB',(100,100),avg_RGB)
 	new_im.show()
+	print("Blended values")
+	print(avg_RGB)
+
+	invert_RGB = tuple([255-x for x in avg_RGB])
+	
+	new_im = Image.new('RGB',(100,100),invert_RGB)
+	new_im.show()
+	print("Inverted values, for color scheme")
+	print(invert_RGB)
+	
