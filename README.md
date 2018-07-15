@@ -1,4 +1,4 @@
-# blendit
+# blendit   ![](https://img.shields.io/badge/python-3-blue.svg?style=for-the-badge)
 Script to get the "average" color of a image
 
 ## Dependencies
