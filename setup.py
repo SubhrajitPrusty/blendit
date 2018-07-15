@@ -39,10 +39,10 @@ setup(name = 'blendit',
 
     keywords='image PIL wallpaper python blend average theme color', 
     license = 'MIT',
-    packages=find_packages(exclude=['contrib','docs','tests']), 
+    packages=setuptools.find_packages(), 
     install_requires=['pillow', 'click'], 
     entry_points='''
     [console_scripts]
-        blendit=blendit:cli
+        blendit=blendit.blendit:cli
     ''',
 )

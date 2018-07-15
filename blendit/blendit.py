@@ -1,4 +1,3 @@
-import sys
 from PIL import Image
 import click
 
@@ -9,10 +8,14 @@ import click
 def cli(show,filename):
     
     argb,argbi = calculate(filename)
+    print("Average color : ",argb)
+    print("Invert of average color : ", argbi)
+    
     if show:
         show_images(argb, argbi)
 
 def calculate(imgname):
+    """ Returns average value and inverted value as (#000000, #ffffff) """
     img = Image.open(imgname)
 
     data = list(img.getdata())
@@ -35,17 +38,10 @@ def calculate(imgname):
     invert_RGB = tuple([255-x for x in avg_RGB])
     invert_RGB_hex = '#'+"".join(hex(x)[2:].zfill(2) for x in invert_RGB)
 
-    print("Blended values")
-    print(avg_RGB)
-    print(avg_RGB_hex)
-        
-    print("Inverted values, for color scheme")
-    print(invert_RGB)
-    print(invert_RGB_hex)
-
     return (avg_RGB_hex, invert_RGB_hex)
 
-def show_images(rgb1, rgb2):        
+def show_images(rgb1, rgb2):
+    """ Opens two images with the calculated values """
     avg_im = Image.new('RGB',(200,200),rgb1)
     avg_im.show()
         
