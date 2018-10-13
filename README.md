@@ -10,7 +10,7 @@ Script to get the "average" color of a image
 ### As a module
 
 ```python
-from blendit import blendit
+import blendit
 
 rgb1, rgb2 = blendit.calculate("/path/to/image/") # returns a tuple containing 2 hex values
 
