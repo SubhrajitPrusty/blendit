@@ -12,7 +12,7 @@ def readme():
         pass
 
 setup(name = 'blendit',
-    version = '1.1',
+    version = '1.1.1',
     description = 'outputs the average color of a picture and its RGB invert',
     long_description=readme(),  
     long_description_content_type='text/markdown', 
