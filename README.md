@@ -26,3 +26,4 @@ blendit filename
 blendit --show filename
 ```
 
+![](./screenshot.png)
