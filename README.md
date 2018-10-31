@@ -1,9 +1,7 @@
 # blendit   ![](https://img.shields.io/badge/python-3-blue.svg?style=for-the-badge)
-Script to get the "average" color of a image
+Simple script to get the "average" color of a image
 
-## Dependencies
-
-`pip install blendit`
+[The more I get to know about PIL, the more this script seems useless]
 
 ## Usage
 
