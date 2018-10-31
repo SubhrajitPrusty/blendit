@@ -4,7 +4,7 @@ import click
 
 
 @click.command()
-@click.option("--show", is_flag=True, help="shows 200x200px images with generated colors")
+@click.option("--show","-s", is_flag=True, help="shows 200x200px images with generated colors")
 @click.argument("filename", type=click.Path(exists=True))
 
 def cli(show,filename):
@@ -19,6 +19,7 @@ def cli(show,filename):
 def calculate(imgname):
 	""" Returns average value and inverted value as (#000000, #ffffff) """
 	img = Image.open(imgname)
+	img = img.resize((img.width//4, img.height//4))
 
 	st = ImageStat.Stat(img)
 	
